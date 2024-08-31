@@ -1,0 +1,52 @@
+:root{ 
+  --main: #F05A28;   
+  --bg-green: #086512; 
+  --bg-green2: #6fd626; 
+  --bg-blue: #0693e3; 
+}
+a{
+  text-decoration: none !important; 
+}
+a:hover{
+  text-decoration: none;
+}
+@media (min-width: 1400px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1441px;
+  }
+}
+body{ 
+  font-family: MaphaoThin;
+  background-color: #eaeaea;
+}    
+
+@font-face{
+  font-family: MaphaoThin;
+  src: url(MaphaoThin.ttf);
+  font-style: normal;
+  font-variant:initial;
+}    
+
+
+
+
+
+/*
+
+transition: .33s all ease-out;  
+######################################################################################################
+###################################################################################################### 
+*/ 
+
+@media only screen and (max-width: 1024px) { /* MOBILE */
+  .mb-x{
+    display: none !important;
+  }      
+}
+@media only screen and (min-width: 1025px) { /* PC */
+  .pc-x{
+    display: none !important;
+  }    
+}    
+@media only screen and (width: 1024px) { /* PC */ 
+}   
