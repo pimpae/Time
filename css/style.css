@@ -25,6 +25,7 @@ body{
   height: 100vh;
   width: 100%;
   color: #fff;
+  padding-top: 100px;
 }    
 h1{
   font-size: 50px;
@@ -35,21 +36,33 @@ ul{
   display: flex;
   padding-left: 0px;
   width: 100%;
+  margin-left: -20px;
 }       
 ul li{
   text-align: center;
   font-size: 200px; 
   opacity: .65;
+  letter-spacing: 20px;
 }     
 #hours{ 
-  width: 180px; 
+  width: 190px; 
+  text-align: center;
 }
 #min{ 
-  width: 180px; 
+  width: 250px; 
+  text-align: center;
 }
 #sec{ 
   width: 150px;
   opacity: .25;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#point{  
+  width: 100px;
+  opacity: .25;
+  font-size: 120px; 
+  margin-top: 55px;
 }
 @font-face{
   font-family: MaphaoThin;
@@ -57,11 +70,7 @@ ul li{
   font-style: normal;
   font-variant:initial;
 }    
-
-
-
-
-
+ 
 /*
 
 transition: .33s all ease-out;  
@@ -70,9 +79,44 @@ transition: .33s all ease-out;
 */ 
 
 @media only screen and (max-width: 1024px) { /* MOBILE */
+  body{  
+    padding-top: 50px;
+  }   
   .mb-x{
     display: none !important;
   }      
+  h1{
+    font-size: 30px; 
+  }
+  #hours{ 
+    width: 100%; 
+    text-align: center;
+  }
+  #min{ 
+    width: 100%; 
+    text-align: center;
+  }
+  #sec{ 
+    width: 60px;
+    opacity: .25;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;  
+  }
+  ul{ 
+    margin-left: 0px;
+  }       
+  ul li{ 
+    font-size: 88px;  
+    letter-spacing: 10px;
+  }     
+  #point{  
+    width: 20px;
+    opacity: .25;
+    font-size: 40px; 
+    margin-top: 40px;
+  }
 }
 @media only screen and (min-width: 1025px) { /* PC */
   .pc-x{
