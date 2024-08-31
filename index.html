@@ -51,8 +51,7 @@
 				<div class="icon" style="background-image: url(img/2.png);"></div> 
 			</a> 
 
-		</div> <iframe src="https://www.flashscore.com/widgets/live/" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-
+		</div>  
 	</main>
  
 
@@ -63,50 +62,32 @@
 
  
 
-	<script type="text/javascript">
-
-		fetch('https://api.football-data.org/v2/competitions/PL/matches', {
-			method: 'GET',
-			headers: { 'X-Auth-Token': 'YOUR_API_KEY' }
-		})
-		.then(response => response.json())
-		.then(data => console.log(data))
-		.catch(error => console.error(error));
+	<script type="text/javascript"> 
 
 
-		$(document).ready(function() {
-		// Making 2 variable month and day
-		var monthNames = [ "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม" ]; 
-		var dayNames= ["วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์"]
-		
-		// make single object
-		var newDate = new Date();
-		// make current time
-		newDate.setDate(newDate.getDate());
-		// setting date and time
-		$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' พ.ศ.' + (newDate.getFullYear()+543));
-		
-		setInterval( function() {
-		// Create a newDate() object and extract the seconds of the current time on the visitor's
-		var seconds = new Date().getSeconds();
-		// Add a leading zero to seconds value
-		$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
-		},1000);
-		
-		setInterval( function() {
-		// Create a newDate() object and extract the minutes of the current time on the visitor's
-		var minutes = new Date().getMinutes();
-		// Add a leading zero to the minutes value
-		$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
-		},1000);
-		
-		setInterval( function() {
-		// Create a newDate() object and extract the hours of the current time on the visitor's
-		var hours = new Date().getHours();
-		// Add a leading zero to the hours value
-		$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
-		}, 1000); 
-		});
+		$(document).ready(function() { 
+			var monthNames = [ "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม" ]; 
+			var dayNames= ["วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์"]
+			 
+			var newDate = new Date(); 
+			newDate.setDate(newDate.getDate()); 
+				$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' พ.ศ.' + (newDate.getFullYear()+543));
+			
+			setInterval( function() { 
+			var seconds = new Date().getSeconds(); 
+				$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+			},1000);
+			
+			setInterval( function() { 
+			var minutes = new Date().getMinutes(); 
+				$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+			},1000);
+			
+			setInterval( function() { 
+			var hours = new Date().getHours(); 
+				$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+			}, 1000); 
+ 
 	</script>
 </body>
 </html>
