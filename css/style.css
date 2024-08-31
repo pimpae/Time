@@ -37,10 +37,12 @@ ul{
 }       
 ul li{
   text-align: center;
-  font-size: 200px;
-  width: 100%;
+  font-size: 200px; 
 }     
-
+#sec{
+  width: 100px;
+  opacity: .4;
+}
 @font-face{
   font-family: MaphaoThin;
   src: url(MaphaoThin.ttf);
