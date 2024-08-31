@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TIME</title>
-	<link rel="icon" type="image/x-icon" href="images/logo.jpg">
+	<link rel="icon" type="image/x-icon" href="img/cc.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"/>  
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />  
@@ -29,7 +29,7 @@
  
 	<main> 
 		<h1><span id="Date"></span></h1>
-		<div class="clock d-none"> 
+		<div class="clock text-center w-100"> 
 			<ul>
 				<li id="hours"></li>
 				<li id="point">:</li>
@@ -55,7 +55,7 @@
 		// make current time
 		newDate.setDate(newDate.getDate());
 		// setting date and time
-		$('#Date').html(dayNames[newDate.getDay()] + " ที่ " + newDate.getDate() + ' เดือน ' + monthNames[newDate.getMonth()] + ' พ.ศ.' + (newDate.getFullYear()+543));
+		$('#Date').html(dayNames[newDate.getDay()] + " ที่ " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' พ.ศ.' + (newDate.getFullYear()+543));
 		
 		setInterval( function() {
 		// Create a newDate() object and extract the seconds of the current time on the visitor's
