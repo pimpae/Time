@@ -41,14 +41,14 @@ ul li{
   text-align: center;
   font-size: 200px; 
   opacity: .65;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
 }     
 #hours{ 
   width: 30%; 
   text-align: center;
 }
 #min{ 
-  width: 30%; 
+  width: 33%; 
   text-align: center;
 }
 #sec{ 
@@ -109,10 +109,7 @@ ul li{
 }
 .right .icon:hover{ 
   opacity: 1;
-}
- 
- 
- 
+} 
 /*
 
 transition: .33s all ease-out;  
