@@ -1,7 +1,7 @@
 window.onSpotifyWebPlaybackSDKReady = () => {
     const token = 'ef80da85d9a3480698ac2a67280bd9fd'; // Replace with your access token
     const player = new Spotify.Player({
-        name: 'Web Playback SDK',
+        name: 'PAE',
         getOAuthToken: cb => { cb(token); }
     });
 
