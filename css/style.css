@@ -53,10 +53,10 @@ ul li{
 }
 #sec{ 
   width: 200px;
-  opacity: .25;
+  opacity: .15;
   letter-spacing: 1px;
   text-align: center;
-}
+} 
 #point{  
   width: 5%;
   opacity: .25;
