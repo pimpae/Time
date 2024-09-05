@@ -36,6 +36,7 @@ body{
 h1{
   font-size: 50px;
   opacity: .65;
+  line-height: 0px;
 }
 ul{
   list-style: none;
@@ -129,7 +130,7 @@ ul li{
   width: 170px;
 } 
 .datepicker-switch{
-  color: red;
+  color: rgba( 255, 0, 0, 0.4);
 } 
 .day{
   opacity: .15;
@@ -142,7 +143,7 @@ ul li{
   border-radius: 50%; 
 }
 .today.day{
-  background: red !important;
+  background: rgba( 255, 0, 0, 0.4) !important;
   border-radius: 50%;
   opacity: 1 !important;
 }
@@ -153,6 +154,13 @@ ul li{
 #datepicker:hover .dow{ 
   opacity: 1; 
 }  
+#datepicker:hover .today.day{
+  background: rgba( 255, 0, 0,1) !important; 
+  opacity: 1 !important;
+}
+#datepicker.day:hover .datepicker-switch{
+  color: rgba( 255, 0, 0, 1);
+} 
 .fullscreen-btn{
   background-color: transparent;
   position: absolute;
