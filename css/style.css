@@ -153,18 +153,24 @@ ul li{
 #datepicker:hover .dow{ 
   opacity: 1; 
 }  
-#enterFullscreen{
+.fullscreen-btn{
+  background-color: transparent;
   position: absolute;
   top: 20px;
   display: flex;
   justify-content: center;
   opacity: .1;
   transition: .33s all ease-out;  
-  border: 2px solid #fff;
+  border: 0px solid #fff;
   color: #fff;
+  font-size: 22px;
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 4px;
 }
-#enterFullscreen:hover{ 
+.fullscreen-btn:hover{ 
   opacity: 1;
+  background: rgba( 255, 255, 255, 0.1);
 }
 #weather{
   position: absolute;
@@ -172,7 +178,7 @@ ul li{
   top: 20px; 
 }
 #weather p{
-  font-size: 60px;
+  font-size: 35px !important;
   opacity: .6;
 }
  

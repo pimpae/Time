@@ -29,8 +29,9 @@
 </head>
 <body> 
 	<div id="datepicker"></div>
-    <button id="enterFullscreen" class="btn" onclick="enterFullscreen()">Go Fullscreen</button> 
-	
+    <!-- <button id="enterFullscreen" class="btn" onclick="enterFullscreen()">Go Fullscreen</button>  -->
+	<button class="fullscreen-btn" id="exitFullscreen"><i class="far fa-desktop"></i></button>
+
 
 	<div id="weather"></div>
 
@@ -100,6 +101,27 @@
 
 	<script type="text/javascript">   
 			
+		document.getElementById('exitFullscreen').addEventListener('click', function() {
+            if (document.fullscreenElement) {
+                document.exitFullscreen().catch(err => {
+                    console.error("Failed to exit fullscreen mode:", err);
+                });
+            }
+			else{ 
+				const elem = document.documentElement;
+
+				if (elem.requestFullscreen) {
+					elem.requestFullscreen();
+				} else if (elem.mozRequestFullScreen) { 
+					elem.mozRequestFullScreen();
+				} else if (elem.webkitRequestFullscreen) {  
+					elem.webkitRequestFullscreen();
+				} else if (elem.msRequestFullscreen) {  
+					elem.msRequestFullscreen();
+				}
+			}
+        });
+
 		function openDiscord() {
 			window.location.href = "discord://";
 		}
