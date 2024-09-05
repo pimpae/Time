@@ -109,7 +109,50 @@ ul li{
 }
 .right .icon:hover{ 
   opacity: 1;
+}
+#datepicker{
+  position: absolute;
+  left: 20px;
+  top: 20px; 
+  transition: .33s all ease-out;  
+  width: 300px;
+}  
+.datepicker {
+  width: 120px;
+}
+#datepicker:hover{ 
+  opacity: 1; 
+  font-size: 20px;
+}  
+#datepicker:hover .datepicker{ 
+  width: 170px;
 } 
+.datepicker-switch{
+  color: red;
+} 
+.day{
+  opacity: .15;
+  padding: 2px 6px;
+}
+.dow{
+  opacity: .15; 
+}
+.day:hover{
+  color: black;
+  border-radius: 50%; 
+}
+.today.day{
+  background: red !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+}
+#datepicker:hover .day{ 
+  opacity: 1; 
+}  
+#datepicker:hover .dow{ 
+  opacity: 1; 
+}  
+ 
 /*
 
 transition: .33s all ease-out;  
