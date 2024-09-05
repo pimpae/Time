@@ -15,6 +15,12 @@ a:hover{
       max-width: 1441px;
   }
 }
+@font-face{
+  font-family: MaphaoThin;
+  src: url(MaphaoThin.ttf);
+  font-style: normal;
+  font-variant:initial;
+}    
 body{ 
   font-family: MaphaoThin;
   background-color: #000;
@@ -63,12 +69,6 @@ ul li{
   font-size: 120px; 
   margin-top: 55px;
 }
-@font-face{
-  font-family: MaphaoThin;
-  src: url(MaphaoThin.ttf);
-  font-style: normal;
-  font-variant:initial;
-}    
 .right{
   position: absolute;
   right: 0;
@@ -77,22 +77,21 @@ ul li{
   height: calc(100vh - 40px);
   width: 100px; 
   z-index: 11; 
-  transition: .33s all ease-out;  
+  transition: 1.33s all ease-out;  
   opacity: 0;
-  padding: 20px;
-
+  padding: 20px; 
   background: rgba( 255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 16px; 
   border: .5px solid rgba(255, 255, 255, 0.3);
-  border-right: 0px !important;
+  border-right: 0px !important; 
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); 
 }
 .right:hover{ 
+  transition: .33s all ease-out;  
   opacity: 1;
-  transition: 1.33s all ease-out;  
 }
 .right .icon{
   background-size: 100% auto !important;
@@ -104,22 +103,24 @@ ul li{
   display: block;
   margin: auto;
   margin-bottom: 20px;
-  opacity: .5;
+  opacity: 1;
   cursor: pointer;
 }
-.right .icon:hover{ 
-  opacity: 1;
+.right button{
+  background-color: transparent;
+  padding: 0px;
+  border: 0px;
+  margin-bottom: 0px;
+}
+.right .icon:hover{  
+  opacity: .6;
 }
 #datepicker{
   position: absolute;
   left: 20px;
   top: 20px; 
-  transition: .33s all ease-out;  
-  width: 300px;
-}  
-.datepicker {
-  width: 120px;
-}
+  transition: .33s all ease-out;   
+}   
 #datepicker:hover{ 
   opacity: 1; 
   font-size: 20px;
@@ -132,7 +133,6 @@ ul li{
 } 
 .day{
   opacity: .15;
-  padding: 2px 6px;
 }
 .dow{
   opacity: .15; 
@@ -148,13 +148,36 @@ ul li{
 }
 #datepicker:hover .day{ 
   opacity: 1; 
+  padding: 2px 6px;
 }  
 #datepicker:hover .dow{ 
   opacity: 1; 
 }  
+#enterFullscreen{
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  opacity: .1;
+  transition: .33s all ease-out;  
+  border: 2px solid #fff;
+  color: #fff;
+}
+#enterFullscreen:hover{ 
+  opacity: 1;
+}
+#weather{
+  position: absolute;
+  right: 20px; 
+  top: 20px; 
+}
+#weather p{
+  font-size: 60px;
+  opacity: .6;
+}
  
-/*
 
+/*
 transition: .33s all ease-out;  
 ######################################################################################################
 ###################################################################################################### 

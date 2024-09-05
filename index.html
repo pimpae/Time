@@ -29,7 +29,12 @@
 </head>
 <body> 
 	<div id="datepicker"></div>
- 
+    <button id="enterFullscreen" class="btn" onclick="enterFullscreen()">Go Fullscreen</button> 
+	
+
+	<div id="weather"></div>
+
+
 	<main>   
 		<h1><span id="Date"></span></h1>
 		<div class="clock text-center w-100"> 
@@ -44,23 +49,66 @@
 		<div class="right"> 
 			<a href="steam://rungameid/1665460">
 				<div class="icon" style="background-image: url(img/1.jpg);"></div>
-			</a>  
+			</a>   
+			<button onclick="openDiscord()">
+				<div class="icon" style="background-image: url(img/3.png);"></div> 
+			</button> 
+			<button onclick="openSpotify()">
+				<div class="icon" style="background-image: url(img/4.png);"></div> 
+			</button>
 		</div>  
 		
-	</main>
- 
+	</main> 
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/locales/bootstrap-datepicker.th.min.js"></script>
+ 
+    <script>
+        const apiKey = 'bd5e378503939ddaee76f12ad7a97608'; // Replace with your OpenWeatherMap API key
+        const city = 'Sisaket,TH';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const weatherElement = document.getElementById('weather');
+
+                if (data && data.main && data.weather) {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    //weatherElement.innerHTML = `<p>Temperature: ${temperature}°C</p> <p>Description: ${description}</p>`;
+                    weatherElement.innerHTML = `<p>${temperature}°C</p>`;
+                } else {
+                    weatherElement.innerHTML = `<p>Weather data is unavailable.</p>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching the weather data:', error);
+                document.getElementById('weather').innerHTML = `<p>Failed to load weather data.</p>`;
+            });
+    </script>
+
+
 	<script type="text/javascript">   
-  
+			
+		function openDiscord() {
+			window.location.href = "discord://";
+		}
+		function openSpotify() {
+			window.location.href = "spotify://";
+		}
 
-		$(document).ready(function() {   
+  
+		$(document).ready(function() {    
 
 			var monthNames = [ "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม" ]; 
 			var dayNames= ["วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์"]
@@ -91,6 +139,21 @@
 			});
 			
 		});
+ 
+        function enterFullscreen() { 
+            const elem = document.documentElement;
+
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { 
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {  
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {  
+                elem.msRequestFullscreen();
+            }
+        }
+
 	</script>
 </body>
 </html>
