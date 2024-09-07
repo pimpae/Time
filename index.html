@@ -87,7 +87,7 @@
 					const temperature = data.main.temp;
 					const description = data.weather[0].description;
 					//weatherElement.innerHTML = `<p>Temperature: ${temperature}°C</p> <p>Description: ${description}</p>`;
-					weatherElement.innerHTML = `<p>${temperature}°C</p>`;
+					weatherElement.innerHTML = `<p>${temperature}°C</p> ${city} `;
 				} else {
 					weatherElement.innerHTML = `<p>Weather data is unavailable.</p>`;
 				}
