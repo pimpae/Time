@@ -244,3 +244,10 @@ transition: .33s all ease-out;
 }    
 @media only screen and (width: 1024px) { /* PC */ 
 }   
+.bot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
