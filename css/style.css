@@ -250,4 +250,11 @@ transition: .33s all ease-out;
   left: 0;
   width: 100%;
   margin-bottom: 20px;
+  opacity: .5;
+  transform: scale(.75);
+  transition: .33s all ease-out;  
+}
+.bot:hover{
+  transform: scale(1);
+  opacity: 1;
 }
