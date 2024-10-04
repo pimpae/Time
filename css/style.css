@@ -88,7 +88,7 @@ ul li{
   border-bottom-left-radius: 16px; 
   /* border: .5px solid rgba(255, 255, 255, 0.3); */
   border-right: 0px !important; 
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3); 
 }
 .right:hover{ 
   transition: .33s all ease-out;  
